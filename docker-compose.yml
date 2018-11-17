@@ -1,0 +1,15 @@
+version '3.1'
+
+services:
+  db:
+    image: postgres:11.1-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
+    ports:
+      - 5432:5432
+  hdc:
+    image: hyperbolic-debug-chamber:0.0.0
+    ports:
+      - 8080:8080
+
